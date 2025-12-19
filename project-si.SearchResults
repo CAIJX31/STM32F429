@@ -1,0 +1,48 @@
+---- SIMULATOR Matches (47 in 28 files) ----
+CanvasWidget.cpp (middlewares\st\touchgfx\framework\source\touchgfx\widgets\canvas):#ifdef SIMULATOR
+CanvasWidget.cpp (middlewares\st\touchgfx_backup1\framework\source\touchgfx\widgets\canvas):#ifdef SIMULATOR
+CanvasWidget.cpp (middlewares\st\touchgfx_backup\framework\source\touchgfx\widgets\canvas):#ifdef SIMULATOR
+CanvasWidgetRenderer.hpp (middlewares\st\touchgfx\framework\include\touchgfx\canvas_widget_renderer):#ifdef SIMULATOR
+CanvasWidgetRenderer.hpp (middlewares\st\touchgfx\framework\include\touchgfx\canvas_widget_renderer):#ifdef SIMULATOR
+CanvasWidgetRenderer.hpp (middlewares\st\touchgfx_backup1\framework\include\touchgfx\canvas_widget_renderer):#ifdef SIMULATOR
+CanvasWidgetRenderer.hpp (middlewares\st\touchgfx_backup1\framework\include\touchgfx\canvas_widget_renderer):#ifdef SIMULATOR
+CanvasWidgetRenderer.hpp (middlewares\st\touchgfx_backup\framework\include\touchgfx\canvas_widget_renderer):#ifdef SIMULATOR
+CanvasWidgetRenderer.hpp (middlewares\st\touchgfx_backup\framework\include\touchgfx\canvas_widget_renderer):#ifdef SIMULATOR
+Config.hpp (middlewares\st\touchgfx\framework\include\touchgfx\hal):#ifdef SIMULATOR
+Config.hpp (middlewares\st\touchgfx_backup1\framework\include\touchgfx\hal):#ifdef SIMULATOR
+Config.hpp (middlewares\st\touchgfx_backup\framework\include\touchgfx\hal):#ifdef SIMULATOR
+FirstView.cpp (touchgfx\gui\src\first_screen):#ifndef SIMULATOR
+HALSDL2.cpp (middlewares\st\touchgfx\framework\source\platform\hal\simulator\sdl2):#if defined(SIMULATOR) && !defined(__linux__)
+HALSDL2.cpp (middlewares\st\touchgfx_backup1\framework\source\platform\hal\simulator\sdl2):#if defined(SIMULATOR) && !defined(__linux__)
+HALSDL2.cpp (middlewares\st\touchgfx_backup\framework\source\platform\hal\simulator\sdl2):#if defined(SIMULATOR) && !defined(__linux__)
+MainView.cpp (touchgfx\gui\src\main_screen):#ifndef SIMULATOR
+MainView.cpp (touchgfx\gui\src\main_screen):#ifndef SIMULATOR
+MainView.cpp (touchgfx\gui\src\main_screen):#ifndef SIMULATOR
+MainView.cpp (touchgfx\gui\src\main_screen):#ifndef SIMULATOR
+MainView.cpp (touchgfx\gui\src\main_screen):#ifndef SIMULATOR
+MainView.cpp (touchgfx\gui\src\main_screen):#ifndef SIMULATOR
+MainView.cpp (touchgfx\gui\src\main_screen):#ifndef SIMULATOR
+MainView.cpp (touchgfx\gui\src\main_screen):#ifndef SIMULATOR
+Outline.hpp (middlewares\st\touchgfx\framework\include\touchgfx\canvas_widget_renderer):#ifdef SIMULATOR
+Outline.hpp (middlewares\st\touchgfx_backup1\framework\include\touchgfx\canvas_widget_renderer):#ifdef SIMULATOR
+Outline.hpp (middlewares\st\touchgfx_backup\framework\include\touchgfx\canvas_widget_renderer):#ifdef SIMULATOR
+Rasterizer.hpp (middlewares\st\touchgfx\framework\include\touchgfx\canvas_widget_renderer):#ifndef SIMULATOR
+Rasterizer.hpp (middlewares\st\touchgfx\framework\include\touchgfx\canvas_widget_renderer):#ifndef SIMULATOR
+Rasterizer.hpp (middlewares\st\touchgfx_backup1\framework\include\touchgfx\canvas_widget_renderer):#ifndef SIMULATOR
+Rasterizer.hpp (middlewares\st\touchgfx_backup1\framework\include\touchgfx\canvas_widget_renderer):#ifndef SIMULATOR
+Rasterizer.hpp (middlewares\st\touchgfx_backup\framework\include\touchgfx\canvas_widget_renderer):#ifndef SIMULATOR
+Rasterizer.hpp (middlewares\st\touchgfx_backup\framework\include\touchgfx\canvas_widget_renderer):#ifndef SIMULATOR
+scopeView.cpp (touchgfx\gui\src\scope_screen):#ifndef SIMULATOR
+scopeView.cpp (touchgfx\gui\src\scope_screen):   	#ifndef SIMULATOR
+scopeView.cpp (touchgfx\gui\src\scope_screen):			#ifndef SIMULATOR
+SoftwareMJPEGDecoder.cpp (touchgfx\generated\simulator\src\video):#ifdef SIMULATOR
+SoftwareMJPEGDecoder.cpp (touchgfx\generated\simulator\src\video):#ifdef SIMULATOR
+Utils.hpp (middlewares\st\touchgfx\framework\include\touchgfx):#if defined(SIMULATOR) && !defined(__linux__)
+Utils.hpp (middlewares\st\touchgfx\framework\include\touchgfx):#ifdef SIMULATOR
+Utils.hpp (middlewares\st\touchgfx_backup1\framework\include\touchgfx):#if defined(SIMULATOR) && !defined(__linux__)
+Utils.hpp (middlewares\st\touchgfx_backup1\framework\include\touchgfx):#ifdef SIMULATOR
+Utils.hpp (middlewares\st\touchgfx_backup\framework\include\touchgfx):#if defined(SIMULATOR) && !defined(__linux__)
+Utils.hpp (middlewares\st\touchgfx_backup\framework\include\touchgfx):#ifdef SIMULATOR
+Videoconvert.rb (middlewares\st\touchgfx\framework\tools\videoconvert):      hpp_content += "#ifdef SIMULATOR\n"
+Videoconvert.rb (middlewares\st\touchgfx_backup1\framework\tools\videoconvert):      hpp_content += "#ifdef SIMULATOR\n"
+Videoconvert.rb (middlewares\st\touchgfx_backup\framework\tools\videoconvert):      hpp_content += "#ifdef SIMULATOR\n"

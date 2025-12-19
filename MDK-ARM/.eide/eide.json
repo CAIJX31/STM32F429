@@ -1,0 +1,1256 @@
+{
+  "name": "MDK-ARM",
+  "type": "ARM",
+  "mode": "template",
+  "toolchain": "AC5",
+  "dependenceList": [
+    {
+      "groupName": "custom",
+      "depList": [
+        {
+          "name": "default",
+          "sourceDirList": [],
+          "libList": [],
+          "incList": [
+            "./../Core/Inc",
+            "./../TouchGFX/App",
+            "./../TouchGFX/target/generated",
+            "./../TouchGFX/target",
+            "./../Drivers/STM32F4xx_HAL_Driver/Inc",
+            "./../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy",
+            "./../Middlewares/Third_Party/FreeRTOS/Source/include",
+            "./../Middlewares/Third_Party/FreeRTOS/Source/portable/RVDS/ARM_CM4F",
+            "./../Drivers/CMSIS/Device/ST/STM32F4xx/Include",
+            "./../Drivers/CMSIS/Include",
+            "./../Drivers/BSP/SDRAM",
+            "./../Drivers/BSP/SYS",
+            "./../Drivers/BSP/TOUCH",
+            "./../Drivers/BSP/SPI",
+            "./../Drivers/BSP/W25QXX",
+            "./../Drivers/BSP/DealADC",
+            "./../Drivers/CMSIS/DSP/Include",
+            "./../Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS",
+            "./../User/Inc",
+            "./../FATFS/Target",
+            "./../FATFS/App",
+            "./../Middlewares/Third_Party/FatFs/src",
+            "./../middlewares/st/touchgfx/framework/include",
+            "./../touchgfx/generated/fonts/include",
+            "./../touchgfx/generated/gui_generated/include",
+            "./../touchgfx/generated/images/include",
+            "./../touchgfx/generated/texts/include",
+            "./../touchgfx/generated/videos/include",
+            "./../touchgfx/gui/include",
+            "./RTE/_template"
+          ],
+          "defineList": [
+            "USE_HAL_DRIVER",
+            "STM32F429xx",
+            "__TARGET_FPU_VFP",
+            "ARM_MATH_MATRIX_CHECK",
+            "ARM_MATH_ROUNDING",
+            "ARM_MATH_CM4",
+            "__CC_ARM",
+            "USE_FULL_LL_DRIVER"
+          ]
+        }
+      ]
+    }
+  ],
+  "compileConfig": {
+    "cpuType": "Cortex-M4",
+    "floatingPointHardware": "single",
+    "useCustomScatterFile": true,
+    "scatterFilePath": "template.sct",
+    "storageLayout": {
+      "RAM": [
+        {
+          "tag": "RAM",
+          "id": 1,
+          "mem": {
+            "startAddr": "0x0",
+            "size": "0x0"
+          },
+          "isChecked": false,
+          "noInit": false
+        },
+        {
+          "tag": "RAM",
+          "id": 2,
+          "mem": {
+            "startAddr": "0x0",
+            "size": "0x0"
+          },
+          "isChecked": false,
+          "noInit": false
+        },
+        {
+          "tag": "RAM",
+          "id": 3,
+          "mem": {
+            "startAddr": "0x0",
+            "size": "0x0"
+          },
+          "isChecked": false,
+          "noInit": false
+        },
+        {
+          "tag": "IRAM",
+          "id": 1,
+          "mem": {
+            "startAddr": "0x20000000",
+            "size": "0x30000"
+          },
+          "isChecked": true,
+          "noInit": false
+        },
+        {
+          "tag": "IRAM",
+          "id": 2,
+          "mem": {
+            "startAddr": "0x10000000",
+            "size": "0x10000"
+          },
+          "isChecked": true,
+          "noInit": false
+        }
+      ],
+      "ROM": [
+        {
+          "tag": "ROM",
+          "id": 1,
+          "mem": {
+            "startAddr": "0x0",
+            "size": "0x0"
+          },
+          "isChecked": false,
+          "isStartup": false
+        },
+        {
+          "tag": "ROM",
+          "id": 2,
+          "mem": {
+            "startAddr": "0x0",
+            "size": "0x0"
+          },
+          "isChecked": false,
+          "isStartup": false
+        },
+        {
+          "tag": "ROM",
+          "id": 3,
+          "mem": {
+            "startAddr": "0x0",
+            "size": "0x0"
+          },
+          "isChecked": false,
+          "isStartup": false
+        },
+        {
+          "tag": "IROM",
+          "id": 1,
+          "mem": {
+            "startAddr": "0x8000000",
+            "size": "0x100000"
+          },
+          "isChecked": true,
+          "isStartup": true
+        },
+        {
+          "tag": "IROM",
+          "id": 2,
+          "mem": {
+            "startAddr": "0x0",
+            "size": "0x0"
+          },
+          "isChecked": false,
+          "isStartup": false
+        }
+      ]
+    },
+    "options": "null"
+  },
+  "uploader": "STLink",
+  "srcDirs": [
+    "./.eide/deps",
+    "./../User"
+  ],
+  "virtualFolder": {
+    "name": "<virtual_root>",
+    "files": [],
+    "folders": [
+      {
+        "name": "::CMSIS",
+        "files": [],
+        "folders": []
+      },
+      {
+        "name": "Application",
+        "files": [],
+        "folders": [
+          {
+            "name": "Bsp",
+            "files": [
+              {
+                "path": "../Drivers/BSP/DealADC/deal.c"
+              },
+              {
+                "path": "../Drivers/BSP/SDRAM/sdram.c"
+              },
+              {
+                "path": "../Drivers/BSP/SPI/spi.c"
+              },
+              {
+                "path": "../Drivers/BSP/SYS/sys.c"
+              },
+              {
+                "path": "../Drivers/BSP/TOUCH/ctiic.c"
+              },
+              {
+                "path": "../Drivers/BSP/TOUCH/ft5206.c"
+              },
+              {
+                "path": "../Drivers/BSP/W25QXX/w25qxx.c"
+              }
+            ],
+            "folders": []
+          },
+          {
+            "name": "MDK-ARM",
+            "files": [
+              {
+                "path": "startup_stm32f429xx.s"
+              }
+            ],
+            "folders": []
+          },
+          {
+            "name": "User",
+            "files": [],
+            "folders": [
+              {
+                "name": "Core",
+                "files": [
+                  {
+                    "path": "../Core/Src/adc.c"
+                  },
+                  {
+                    "path": "../Core/Src/crc.c"
+                  },
+                  {
+                    "path": "../Core/Src/dma.c"
+                  },
+                  {
+                    "path": "../Core/Src/dma2d.c"
+                  },
+                  {
+                    "path": "../Core/Src/fmc.c"
+                  },
+                  {
+                    "path": "../Core/Src/freertos.c"
+                  },
+                  {
+                    "path": "../Core/Src/gpio.c"
+                  },
+                  {
+                    "path": "../Core/Src/ltdc.c"
+                  },
+                  {
+                    "path": "../Core/Src/main.c"
+                  },
+                  {
+                    "path": "../Core/Src/rng.c"
+                  },
+                  {
+                    "path": "../Core/Src/stm32f4xx_hal_msp.c"
+                  },
+                  {
+                    "path": "../Core/Src/stm32f4xx_hal_timebase_tim.c"
+                  },
+                  {
+                    "path": "../Core/Src/stm32f4xx_it.c"
+                  },
+                  {
+                    "path": "../Core/Src/tim.c"
+                  },
+                  {
+                    "path": "../Core/Src/usart.c"
+                  }
+                ],
+                "folders": []
+              },
+              {
+                "name": "FATFS",
+                "files": [],
+                "folders": [
+                  {
+                    "name": "App",
+                    "files": [
+                      {
+                        "path": "../FATFS/App/fatfs.c"
+                      }
+                    ],
+                    "folders": []
+                  },
+                  {
+                    "name": "Target",
+                    "files": [
+                      {
+                        "path": "../FATFS/Target/user_diskio.c"
+                      }
+                    ],
+                    "folders": []
+                  }
+                ]
+              },
+              {
+                "name": "TouchGFX",
+                "files": [],
+                "folders": [
+                  {
+                    "name": "App",
+                    "files": [
+                      {
+                        "path": "../TouchGFX/App/app_touchgfx.c"
+                      }
+                    ],
+                    "folders": []
+                  },
+                  {
+                    "name": "target",
+                    "files": [
+                      {
+                        "path": "../TouchGFX/target/TouchGFXHAL.cpp"
+                      },
+                      {
+                        "path": "../TouchGFX/target/STM32TouchController.cpp"
+                      },
+                      {
+                        "path": "../TouchGFX/target/TouchGFXGPIO.cpp"
+                      }
+                    ],
+                    "folders": [
+                      {
+                        "name": "generated",
+                        "files": [
+                          {
+                            "path": "../TouchGFX/target/generated/TouchGFXConfiguration.cpp"
+                          },
+                          {
+                            "path": "../TouchGFX/target/generated/TouchGFXGeneratedHAL.cpp"
+                          },
+                          {
+                            "path": "../TouchGFX/target/generated/STM32DMA.cpp"
+                          },
+                          {
+                            "path": "../TouchGFX/target/generated/OSWrappers.cpp"
+                          }
+                        ],
+                        "folders": []
+                      }
+                    ]
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "name": "Drivers",
+        "files": [],
+        "folders": [
+          {
+            "name": "CMSIS",
+            "files": [
+              {
+                "path": "../Core/Src/system_stm32f4xx.c"
+              }
+            ],
+            "folders": []
+          },
+          {
+            "name": "STM32F4xx_HAL_Driver",
+            "files": [
+              {
+                "path": "../Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_ll_adc.c"
+              },
+              {
+                "path": "../Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_ll_gpio.c"
+              },
+              {
+                "path": "../Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_ll_dma.c"
+              },
+              {
+                "path": "../Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_rcc.c"
+              },
+              {
+                "path": "../Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_rcc_ex.c"
+              },
+              {
+                "path": "../Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_flash.c"
+              },
+              {
+                "path": "../Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_flash_ex.c"
+              },
+              {
+                "path": "../Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_flash_ramfunc.c"
+              },
+              {
+                "path": "../Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_gpio.c"
+              },
+              {
+                "path": "../Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_dma_ex.c"
+              },
+              {
+                "path": "../Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_dma.c"
+              },
+              {
+                "path": "../Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_pwr.c"
+              },
+              {
+                "path": "../Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_pwr_ex.c"
+              },
+              {
+                "path": "../Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_cortex.c"
+              },
+              {
+                "path": "../Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal.c"
+              },
+              {
+                "path": "../Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_exti.c"
+              },
+              {
+                "path": "../Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_ll_rcc.c"
+              },
+              {
+                "path": "../Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_ll_utils.c"
+              },
+              {
+                "path": "../Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_ll_exti.c"
+              },
+              {
+                "path": "../Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_crc.c"
+              },
+              {
+                "path": "../Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_dma2d.c"
+              },
+              {
+                "path": "../Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_ll_fmc.c"
+              },
+              {
+                "path": "../Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_sdram.c"
+              },
+              {
+                "path": "../Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_ltdc.c"
+              },
+              {
+                "path": "../Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_ltdc_ex.c"
+              },
+              {
+                "path": "../Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_dsi.c"
+              },
+              {
+                "path": "../Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_ll_rng.c"
+              },
+              {
+                "path": "../Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_tim.c"
+              },
+              {
+                "path": "../Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_tim_ex.c"
+              },
+              {
+                "path": "../Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_ll_tim.c"
+              },
+              {
+                "path": "../Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_uart.c"
+              }
+            ],
+            "folders": []
+          }
+        ]
+      },
+      {
+        "name": "DSP",
+        "files": [],
+        "folders": [
+          {
+            "name": "Library",
+            "files": [
+              {
+                "path": "../Drivers/CMSIS/Lib/ARM/arm_cortexM4lf_math.lib"
+              }
+            ],
+            "folders": []
+          }
+        ]
+      },
+      {
+        "name": "generated",
+        "files": [
+          {
+            "path": "../touchgfx/generated/fonts/src/applicationfontprovider.cpp"
+          },
+          {
+            "path": "../touchgfx/generated/fonts/src/cachedfont.cpp"
+          },
+          {
+            "path": "../touchgfx/generated/fonts/src/font_fzstk_ttf_10_4bpp_0.cpp"
+          },
+          {
+            "path": "../touchgfx/generated/fonts/src/font_segoepr_20_4bpp_0.cpp"
+          },
+          {
+            "path": "../touchgfx/generated/fonts/src/font_segoepr_20_4bpp_4.cpp"
+          },
+          {
+            "path": "../touchgfx/generated/fonts/src/font_segoepr_24_4bpp_0.cpp"
+          },
+          {
+            "path": "../touchgfx/generated/fonts/src/font_segoepr_28_4bpp_0.cpp"
+          },
+          {
+            "path": "../touchgfx/generated/fonts/src/font_segoepr_28_4bpp_4.cpp"
+          },
+          {
+            "path": "../touchgfx/generated/fonts/src/font_simyou_ttf_40_4bpp_0.cpp"
+          },
+          {
+            "path": "../touchgfx/generated/fonts/src/font_simyou_ttf_40_4bpp_12.cpp"
+          },
+          {
+            "path": "../touchgfx/generated/fonts/src/font_simyou_ttf_40_4bpp_13.cpp"
+          },
+          {
+            "path": "../touchgfx/generated/fonts/src/font_simyou_ttf_40_4bpp_19.cpp"
+          },
+          {
+            "path": "../touchgfx/generated/fonts/src/font_simyou_ttf_40_4bpp_9.cpp"
+          },
+          {
+            "path": "../touchgfx/generated/fonts/src/font_stfangso_ttf_20_4bpp_0.cpp"
+          },
+          {
+            "path": "../touchgfx/generated/fonts/src/font_stfangso_ttf_20_4bpp_4.cpp"
+          },
+          {
+            "path": "../touchgfx/generated/fonts/src/font_stkaiti_ttf_30_2bpp_0.cpp"
+          },
+          {
+            "path": "../touchgfx/generated/fonts/src/font_stsong_ttf_30_4bpp_0.cpp"
+          },
+          {
+            "path": "../touchgfx/generated/fonts/src/font_stsong_ttf_30_4bpp_10.cpp"
+          },
+          {
+            "path": "../touchgfx/generated/fonts/src/font_stsong_ttf_30_4bpp_11.cpp"
+          },
+          {
+            "path": "../touchgfx/generated/fonts/src/font_stsong_ttf_30_4bpp_12.cpp"
+          },
+          {
+            "path": "../touchgfx/generated/fonts/src/font_stsong_ttf_30_4bpp_13.cpp"
+          },
+          {
+            "path": "../touchgfx/generated/fonts/src/font_stsong_ttf_30_4bpp_15.cpp"
+          },
+          {
+            "path": "../touchgfx/generated/fonts/src/font_stsong_ttf_30_4bpp_17.cpp"
+          },
+          {
+            "path": "../touchgfx/generated/fonts/src/font_stsong_ttf_30_4bpp_18.cpp"
+          },
+          {
+            "path": "../touchgfx/generated/fonts/src/font_stsong_ttf_30_4bpp_4.cpp"
+          },
+          {
+            "path": "../touchgfx/generated/fonts/src/font_stxihei_ttf_20_4bpp_0.cpp"
+          },
+          {
+            "path": "../touchgfx/generated/fonts/src/font_stxihei_ttf_20_4bpp_10.cpp"
+          },
+          {
+            "path": "../touchgfx/generated/fonts/src/font_stxihei_ttf_20_4bpp_11.cpp"
+          },
+          {
+            "path": "../touchgfx/generated/fonts/src/font_stxihei_ttf_20_4bpp_12.cpp"
+          },
+          {
+            "path": "../touchgfx/generated/fonts/src/font_stxihei_ttf_20_4bpp_13.cpp"
+          },
+          {
+            "path": "../touchgfx/generated/fonts/src/font_stxihei_ttf_20_4bpp_14.cpp"
+          },
+          {
+            "path": "../touchgfx/generated/fonts/src/font_stxihei_ttf_20_4bpp_15.cpp"
+          },
+          {
+            "path": "../touchgfx/generated/fonts/src/font_stxihei_ttf_20_4bpp_17.cpp"
+          },
+          {
+            "path": "../touchgfx/generated/fonts/src/font_stxihei_ttf_20_4bpp_18.cpp"
+          },
+          {
+            "path": "../touchgfx/generated/fonts/src/font_stxihei_ttf_20_4bpp_19.cpp"
+          },
+          {
+            "path": "../touchgfx/generated/fonts/src/font_stxihei_ttf_20_4bpp_31.cpp"
+          },
+          {
+            "path": "../touchgfx/generated/fonts/src/font_stxihei_ttf_20_4bpp_4.cpp"
+          },
+          {
+            "path": "../touchgfx/generated/fonts/src/font_stxihei_ttf_20_4bpp_6.cpp"
+          },
+          {
+            "path": "../touchgfx/generated/fonts/src/font_stxihei_ttf_20_4bpp_9.cpp"
+          },
+          {
+            "path": "../touchgfx/generated/fonts/src/font_stxihei_ttf_25_4bpp_0.cpp"
+          },
+          {
+            "path": "../touchgfx/generated/fonts/src/font_stxihei_ttf_25_4bpp_10.cpp"
+          },
+          {
+            "path": "../touchgfx/generated/fonts/src/font_stxihei_ttf_25_4bpp_11.cpp"
+          },
+          {
+            "path": "../touchgfx/generated/fonts/src/font_stxihei_ttf_25_4bpp_12.cpp"
+          },
+          {
+            "path": "../touchgfx/generated/fonts/src/font_stxihei_ttf_25_4bpp_13.cpp"
+          },
+          {
+            "path": "../touchgfx/generated/fonts/src/font_stxihei_ttf_25_4bpp_15.cpp"
+          },
+          {
+            "path": "../touchgfx/generated/fonts/src/font_stxihei_ttf_25_4bpp_17.cpp"
+          },
+          {
+            "path": "../touchgfx/generated/fonts/src/font_stxihei_ttf_25_4bpp_18.cpp"
+          },
+          {
+            "path": "../touchgfx/generated/fonts/src/font_stxihei_ttf_25_4bpp_31.cpp"
+          },
+          {
+            "path": "../touchgfx/generated/fonts/src/font_stxihei_ttf_25_4bpp_4.cpp"
+          },
+          {
+            "path": "../touchgfx/generated/fonts/src/font_stxihei_ttf_25_4bpp_9.cpp"
+          },
+          {
+            "path": "../touchgfx/generated/fonts/src/font_stxihei_ttf_40_4bpp_0.cpp"
+          },
+          {
+            "path": "../touchgfx/generated/fonts/src/font_stxihei_ttf_40_4bpp_10.cpp"
+          },
+          {
+            "path": "../touchgfx/generated/fonts/src/font_stxihei_ttf_40_4bpp_11.cpp"
+          },
+          {
+            "path": "../touchgfx/generated/fonts/src/font_stxihei_ttf_40_4bpp_14.cpp"
+          },
+          {
+            "path": "../touchgfx/generated/fonts/src/font_stxihei_ttf_40_4bpp_17.cpp"
+          },
+          {
+            "path": "../touchgfx/generated/fonts/src/font_stxihei_ttf_40_4bpp_18.cpp"
+          },
+          {
+            "path": "../touchgfx/generated/fonts/src/font_stxihei_ttf_40_4bpp_9.cpp"
+          },
+          {
+            "path": "../touchgfx/generated/fonts/src/font_stxihei_ttf_60_4bpp_0.cpp"
+          },
+          {
+            "path": "../touchgfx/generated/fonts/src/font_stxihei_ttf_60_4bpp_10.cpp"
+          },
+          {
+            "path": "../touchgfx/generated/fonts/src/font_stxihei_ttf_60_4bpp_11.cpp"
+          },
+          {
+            "path": "../touchgfx/generated/fonts/src/font_stxihei_ttf_60_4bpp_12.cpp"
+          },
+          {
+            "path": "../touchgfx/generated/fonts/src/font_stxihei_ttf_60_4bpp_13.cpp"
+          },
+          {
+            "path": "../touchgfx/generated/fonts/src/font_stxihei_ttf_60_4bpp_14.cpp"
+          },
+          {
+            "path": "../touchgfx/generated/fonts/src/font_stxihei_ttf_60_4bpp_15.cpp"
+          },
+          {
+            "path": "../touchgfx/generated/fonts/src/font_stxihei_ttf_60_4bpp_17.cpp"
+          },
+          {
+            "path": "../touchgfx/generated/fonts/src/font_stxihei_ttf_60_4bpp_18.cpp"
+          },
+          {
+            "path": "../touchgfx/generated/fonts/src/font_stxihei_ttf_60_4bpp_31.cpp"
+          },
+          {
+            "path": "../touchgfx/generated/fonts/src/font_stxihei_ttf_60_4bpp_9.cpp"
+          },
+          {
+            "path": "../touchgfx/generated/fonts/src/font_stxingka_ttf_70_4bpp_0.cpp"
+          },
+          {
+            "path": "../touchgfx/generated/fonts/src/font_stzhongs_ttf_15_4bpp_0.cpp"
+          },
+          {
+            "path": "../touchgfx/generated/fonts/src/font_stzhongs_ttf_24_4bpp_0.cpp"
+          },
+          {
+            "path": "../touchgfx/generated/fonts/src/font_stzhongs_ttf_24_4bpp_10.cpp"
+          },
+          {
+            "path": "../touchgfx/generated/fonts/src/font_stzhongs_ttf_24_4bpp_12.cpp"
+          },
+          {
+            "path": "../touchgfx/generated/fonts/src/font_stzhongs_ttf_24_4bpp_13.cpp"
+          },
+          {
+            "path": "../touchgfx/generated/fonts/src/font_stzhongs_ttf_24_4bpp_14.cpp"
+          },
+          {
+            "path": "../touchgfx/generated/fonts/src/font_stzhongs_ttf_24_4bpp_17.cpp"
+          },
+          {
+            "path": "../touchgfx/generated/fonts/src/font_stzhongs_ttf_24_4bpp_18.cpp"
+          },
+          {
+            "path": "../touchgfx/generated/fonts/src/font_stzhongs_ttf_24_4bpp_19.cpp"
+          },
+          {
+            "path": "../touchgfx/generated/fonts/src/font_stzhongs_ttf_24_4bpp_9.cpp"
+          },
+          {
+            "path": "../touchgfx/generated/fonts/src/font_verdana_10_4bpp_0.cpp"
+          },
+          {
+            "path": "../touchgfx/generated/fonts/src/font_verdana_20_4bpp_0.cpp"
+          },
+          {
+            "path": "../touchgfx/generated/fonts/src/font_verdana_40_4bpp_0.cpp"
+          },
+          {
+            "path": "../touchgfx/generated/fonts/src/fontcache.cpp"
+          },
+          {
+            "path": "../touchgfx/generated/fonts/src/generatedfont.cpp"
+          },
+          {
+            "path": "../touchgfx/generated/fonts/src/kerning_fzstk_ttf_10_4bpp.cpp"
+          },
+          {
+            "path": "../touchgfx/generated/fonts/src/kerning_segoepr_20_4bpp.cpp"
+          },
+          {
+            "path": "../touchgfx/generated/fonts/src/kerning_segoepr_24_4bpp.cpp"
+          },
+          {
+            "path": "../touchgfx/generated/fonts/src/kerning_segoepr_28_4bpp.cpp"
+          },
+          {
+            "path": "../touchgfx/generated/fonts/src/kerning_simyou_ttf_40_4bpp.cpp"
+          },
+          {
+            "path": "../touchgfx/generated/fonts/src/kerning_stfangso_ttf_20_4bpp.cpp"
+          },
+          {
+            "path": "../touchgfx/generated/fonts/src/kerning_stkaiti_ttf_30_2bpp.cpp"
+          },
+          {
+            "path": "../touchgfx/generated/fonts/src/kerning_stsong_ttf_30_4bpp.cpp"
+          },
+          {
+            "path": "../touchgfx/generated/fonts/src/kerning_stxihei_ttf_20_4bpp.cpp"
+          },
+          {
+            "path": "../touchgfx/generated/fonts/src/kerning_stxihei_ttf_25_4bpp.cpp"
+          },
+          {
+            "path": "../touchgfx/generated/fonts/src/kerning_stxihei_ttf_40_4bpp.cpp"
+          },
+          {
+            "path": "../touchgfx/generated/fonts/src/kerning_stxihei_ttf_60_4bpp.cpp"
+          },
+          {
+            "path": "../touchgfx/generated/fonts/src/kerning_stxingka_ttf_70_4bpp.cpp"
+          },
+          {
+            "path": "../touchgfx/generated/fonts/src/kerning_stzhongs_ttf_15_4bpp.cpp"
+          },
+          {
+            "path": "../touchgfx/generated/fonts/src/kerning_stzhongs_ttf_24_4bpp.cpp"
+          },
+          {
+            "path": "../touchgfx/generated/fonts/src/kerning_verdana_10_4bpp.cpp"
+          },
+          {
+            "path": "../touchgfx/generated/fonts/src/kerning_verdana_20_4bpp.cpp"
+          },
+          {
+            "path": "../touchgfx/generated/fonts/src/kerning_verdana_40_4bpp.cpp"
+          },
+          {
+            "path": "../touchgfx/generated/fonts/src/table_fzstk_ttf_10_4bpp.cpp"
+          },
+          {
+            "path": "../touchgfx/generated/fonts/src/table_segoepr_20_4bpp.cpp"
+          },
+          {
+            "path": "../touchgfx/generated/fonts/src/table_segoepr_24_4bpp.cpp"
+          },
+          {
+            "path": "../touchgfx/generated/fonts/src/table_segoepr_28_4bpp.cpp"
+          },
+          {
+            "path": "../touchgfx/generated/fonts/src/table_simyou_ttf_40_4bpp.cpp"
+          },
+          {
+            "path": "../touchgfx/generated/fonts/src/table_stfangso_ttf_20_4bpp.cpp"
+          },
+          {
+            "path": "../touchgfx/generated/fonts/src/table_stkaiti_ttf_30_2bpp.cpp"
+          },
+          {
+            "path": "../touchgfx/generated/fonts/src/table_stsong_ttf_30_4bpp.cpp"
+          },
+          {
+            "path": "../touchgfx/generated/fonts/src/table_stxihei_ttf_20_4bpp.cpp"
+          },
+          {
+            "path": "../touchgfx/generated/fonts/src/table_stxihei_ttf_25_4bpp.cpp"
+          },
+          {
+            "path": "../touchgfx/generated/fonts/src/table_stxihei_ttf_40_4bpp.cpp"
+          },
+          {
+            "path": "../touchgfx/generated/fonts/src/table_stxihei_ttf_60_4bpp.cpp"
+          },
+          {
+            "path": "../touchgfx/generated/fonts/src/table_stxingka_ttf_70_4bpp.cpp"
+          },
+          {
+            "path": "../touchgfx/generated/fonts/src/table_stzhongs_ttf_15_4bpp.cpp"
+          },
+          {
+            "path": "../touchgfx/generated/fonts/src/table_stzhongs_ttf_24_4bpp.cpp"
+          },
+          {
+            "path": "../touchgfx/generated/fonts/src/table_verdana_10_4bpp.cpp"
+          },
+          {
+            "path": "../touchgfx/generated/fonts/src/table_verdana_20_4bpp.cpp"
+          },
+          {
+            "path": "../touchgfx/generated/fonts/src/table_verdana_40_4bpp.cpp"
+          },
+          {
+            "path": "../touchgfx/generated/fonts/src/unmappeddatafont.cpp"
+          },
+          {
+            "path": "../touchgfx/generated/gui_generated/src/common/frontendapplicationbase.cpp"
+          },
+          {
+            "path": "../touchgfx/generated/gui_generated/src/containers/customlistelementbase.cpp"
+          },
+          {
+            "path": "../touchgfx/generated/gui_generated/src/first_screen/firstviewbase.cpp"
+          },
+          {
+            "path": "../touchgfx/generated/gui_generated/src/history_screen/historyviewbase.cpp"
+          },
+          {
+            "path": "../touchgfx/generated/gui_generated/src/quit_screen/quitviewbase.cpp"
+          },
+          {
+            "path": "../touchgfx/generated/gui_generated/src/scope_screen/scopeviewbase.cpp"
+          },
+          {
+            "path": "../touchgfx/generated/images/src/__designer/image_blue_progressindicators_bg_medium_progress_indicator_bg_square_0_degrees.cpp"
+          },
+          {
+            "path": "../touchgfx/generated/images/src/bitmapdatabase.cpp"
+          },
+          {
+            "path": "../touchgfx/generated/images/src/image_background.cpp"
+          },
+          {
+            "path": "../touchgfx/generated/images/src/image_msgbox.cpp"
+          },
+          {
+            "path": "../touchgfx/generated/images/src/image_nextbtn_press.cpp"
+          },
+          {
+            "path": "../touchgfx/generated/images/src/image_nextbtn_release.cpp"
+          },
+          {
+            "path": "../touchgfx/generated/images/src/image_prebtn_press.cpp"
+          },
+          {
+            "path": "../touchgfx/generated/images/src/image_prebtn_release.cpp"
+          },
+          {
+            "path": "../touchgfx/generated/texts/src/languagegb.cpp"
+          },
+          {
+            "path": "../touchgfx/generated/texts/src/texts.cpp"
+          },
+          {
+            "path": "../touchgfx/generated/texts/src/typedtextdatabase.cpp"
+          }
+        ],
+        "folders": []
+      },
+      {
+        "name": "gui",
+        "files": [
+          {
+            "path": "../touchgfx/gui/src/common/frontendapplication.cpp"
+          },
+          {
+            "path": "../touchgfx/gui/src/containers/customlistelement.cpp"
+          },
+          {
+            "path": "../touchgfx/gui/src/first_screen/firstpresenter.cpp"
+          },
+          {
+            "path": "../touchgfx/gui/src/first_screen/firstview.cpp"
+          },
+          {
+            "path": "../touchgfx/gui/src/history_screen/historypresenter.cpp"
+          },
+          {
+            "path": "../touchgfx/gui/src/history_screen/historyview.cpp"
+          },
+          {
+            "path": "../touchgfx/gui/src/model/model.cpp"
+          },
+          {
+            "path": "../touchgfx/gui/src/quit_screen/quitpresenter.cpp"
+          },
+          {
+            "path": "../touchgfx/gui/src/quit_screen/quitview.cpp"
+          },
+          {
+            "path": "../touchgfx/gui/src/scope_screen/scopepresenter.cpp"
+          },
+          {
+            "path": "../touchgfx/gui/src/scope_screen/scopeview.cpp"
+          }
+        ],
+        "folders": []
+      },
+      {
+        "name": "Lib",
+        "files": [
+          {
+            "path": "../middlewares/st/touchgfx/lib/core/cortex_m4f/Keil/touchgfx_core.lib"
+          }
+        ],
+        "folders": []
+      },
+      {
+        "name": "Middlewares",
+        "files": [],
+        "folders": [
+          {
+            "name": "FatFs",
+            "files": [
+              {
+                "path": "../Middlewares/Third_Party/FatFs/src/diskio.c"
+              },
+              {
+                "path": "../Middlewares/Third_Party/FatFs/src/ff.c"
+              },
+              {
+                "path": "../Middlewares/Third_Party/FatFs/src/ff_gen_drv.c"
+              },
+              {
+                "path": "../Middlewares/Third_Party/FatFs/src/option/syscall.c"
+              },
+              {
+                "path": "../Middlewares/Third_Party/FatFs/src/option/ccsbcs.c"
+              }
+            ],
+            "folders": []
+          },
+          {
+            "name": "FreeRTOS",
+            "files": [
+              {
+                "path": "../Middlewares/Third_Party/FreeRTOS/Source/croutine.c"
+              },
+              {
+                "path": "../Middlewares/Third_Party/FreeRTOS/Source/event_groups.c"
+              },
+              {
+                "path": "../Middlewares/Third_Party/FreeRTOS/Source/list.c"
+              },
+              {
+                "path": "../Middlewares/Third_Party/FreeRTOS/Source/queue.c"
+              },
+              {
+                "path": "../Middlewares/Third_Party/FreeRTOS/Source/stream_buffer.c"
+              },
+              {
+                "path": "../Middlewares/Third_Party/FreeRTOS/Source/tasks.c"
+              },
+              {
+                "path": "../Middlewares/Third_Party/FreeRTOS/Source/timers.c"
+              },
+              {
+                "path": "../Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS/cmsis_os.c"
+              },
+              {
+                "path": "../Middlewares/Third_Party/FreeRTOS/Source/portable/MemMang/heap_4.c"
+              },
+              {
+                "path": "../Middlewares/Third_Party/FreeRTOS/Source/portable/RVDS/ARM_CM4F/port.c"
+              }
+            ],
+            "folders": []
+          }
+        ]
+      },
+      {
+        "name": "User",
+        "files": [
+          {
+            "path": "../User/Src/history.c"
+          },
+          {
+            "path": "../User/Src/spwm.c"
+          }
+        ],
+        "folders": []
+      }
+    ]
+  },
+  "excludeList": [],
+  "outDir": "build",
+  "deviceName": null,
+  "packDir": null,
+  "uploadConfig": {
+    "bin": "",
+    "proType": "SWD",
+    "resetMode": "default",
+    "runAfterProgram": true,
+    "speed": 4000,
+    "address": "0x08000000",
+    "elFile": "None",
+    "optionBytes": ".eide/template.st.option.bytes.ini",
+    "otherCmds": ""
+  },
+  "uploadConfigMap": {
+    "JLink": {
+      "bin": "",
+      "baseAddr": "0x08000000",
+      "cpuInfo": {
+        "vendor": "ST",
+        "cpuName": "STM32F103C8"
+      },
+      "proType": 1,
+      "speed": 8000,
+      "otherCmds": ""
+    }
+  },
+  "miscInfo": {
+    "uid": "f54dac176be81cf767ad137a3b3460b9"
+  },
+  "targets": {
+    "template": {
+      "compileConfig": {
+        "cpuType": "Cortex-M4",
+        "floatingPointHardware": "single",
+        "useCustomScatterFile": true,
+        "scatterFilePath": "template.sct",
+        "storageLayout": {
+          "RAM": [
+            {
+              "tag": "RAM",
+              "id": 1,
+              "mem": {
+                "startAddr": "0x0",
+                "size": "0x0"
+              },
+              "isChecked": false,
+              "noInit": false
+            },
+            {
+              "tag": "RAM",
+              "id": 2,
+              "mem": {
+                "startAddr": "0x0",
+                "size": "0x0"
+              },
+              "isChecked": false,
+              "noInit": false
+            },
+            {
+              "tag": "RAM",
+              "id": 3,
+              "mem": {
+                "startAddr": "0x0",
+                "size": "0x0"
+              },
+              "isChecked": false,
+              "noInit": false
+            },
+            {
+              "tag": "IRAM",
+              "id": 1,
+              "mem": {
+                "startAddr": "0x20000000",
+                "size": "0x30000"
+              },
+              "isChecked": true,
+              "noInit": false
+            },
+            {
+              "tag": "IRAM",
+              "id": 2,
+              "mem": {
+                "startAddr": "0x10000000",
+                "size": "0x10000"
+              },
+              "isChecked": true,
+              "noInit": false
+            }
+          ],
+          "ROM": [
+            {
+              "tag": "ROM",
+              "id": 1,
+              "mem": {
+                "startAddr": "0x0",
+                "size": "0x0"
+              },
+              "isChecked": false,
+              "isStartup": false
+            },
+            {
+              "tag": "ROM",
+              "id": 2,
+              "mem": {
+                "startAddr": "0x0",
+                "size": "0x0"
+              },
+              "isChecked": false,
+              "isStartup": false
+            },
+            {
+              "tag": "ROM",
+              "id": 3,
+              "mem": {
+                "startAddr": "0x0",
+                "size": "0x0"
+              },
+              "isChecked": false,
+              "isStartup": false
+            },
+            {
+              "tag": "IROM",
+              "id": 1,
+              "mem": {
+                "startAddr": "0x8000000",
+                "size": "0x100000"
+              },
+              "isChecked": true,
+              "isStartup": true
+            },
+            {
+              "tag": "IROM",
+              "id": 2,
+              "mem": {
+                "startAddr": "0x0",
+                "size": "0x0"
+              },
+              "isChecked": false,
+              "isStartup": false
+            }
+          ]
+        },
+        "options": "null"
+      },
+      "uploader": "STLink",
+      "uploadConfig": {
+        "bin": "",
+        "proType": "SWD",
+        "resetMode": "default",
+        "runAfterProgram": true,
+        "speed": 4000,
+        "address": "0x08000000",
+        "elFile": "None",
+        "optionBytes": ".eide/template.st.option.bytes.ini",
+        "otherCmds": ""
+      },
+      "uploadConfigMap": {
+        "JLink": {
+          "bin": "",
+          "baseAddr": "0x08000000",
+          "cpuInfo": {
+            "vendor": "ST",
+            "cpuName": "STM32F103C8"
+          },
+          "proType": 1,
+          "speed": 8000,
+          "otherCmds": ""
+        }
+      },
+      "toolchain": "AC5",
+      "custom_dep": {
+        "name": "default",
+        "sourceDirList": [],
+        "libList": [],
+        "incList": [
+          "../Core/Inc",
+          "../TouchGFX/App",
+          "../TouchGFX/target/generated",
+          "../TouchGFX/target",
+          "../Drivers/STM32F4xx_HAL_Driver/Inc",
+          "../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy",
+          "../Middlewares/Third_Party/FreeRTOS/Source/include",
+          "../Middlewares/Third_Party/FreeRTOS/Source/portable/RVDS/ARM_CM4F",
+          "../Drivers/CMSIS/Device/ST/STM32F4xx/Include",
+          "../Drivers/CMSIS/Include",
+          "../Drivers/BSP/SDRAM",
+          "../Drivers/BSP/SYS",
+          "../Drivers/BSP/TOUCH",
+          "../Drivers/BSP/SPI",
+          "../Drivers/BSP/W25QXX",
+          "../Drivers/BSP/DealADC",
+          "../Drivers/CMSIS/DSP/Include",
+          "../Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS",
+          "../User/Inc",
+          "../FATFS/Target",
+          "../FATFS/App",
+          "../Middlewares/Third_Party/FatFs/src",
+          "../middlewares/st/touchgfx/framework/include",
+          "../touchgfx/generated/fonts/include",
+          "../touchgfx/generated/gui_generated/include",
+          "../touchgfx/generated/images/include",
+          "../touchgfx/generated/texts/include",
+          "../touchgfx/generated/videos/include",
+          "../touchgfx/gui/include",
+          "RTE/_template"
+        ],
+        "defineList": [
+          "USE_HAL_DRIVER",
+          "STM32F429xx",
+          "__TARGET_FPU_VFP",
+          "ARM_MATH_MATRIX_CHECK",
+          "ARM_MATH_ROUNDING",
+          "ARM_MATH_CM4",
+          "__CC_ARM",
+          "USE_FULL_LL_DRIVER"
+        ]
+      },
+      "excludeList": []
+    }
+  },
+  "version": "3.1"
+}

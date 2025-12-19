@@ -1,0 +1,133 @@
+/*
+ * @Author: Keinvin
+ * @Date: 2022-05-31 13:20:35
+ * @LastEditors: Keinvin
+ * @LastEditTime: 2022-06-02 20:53:18
+ * @FilePath: \MDK-ARMc:\Users\Lltzanhd\Desktop\template\User\Src\spwm.c
+ */
+#include "spwm.h"
+#include "main.h"
+
+const uint32_t spwmSrc_50[300] = {
+    1500, 1515, 1531, 1547, 1562, 1578, 1593, 1609, 1625, 1640, 1655, 1671, 1686, 1701, 1716, 1731,
+    1746, 1761, 1776, 1790, 1805, 1819, 1833, 1847, 1861, 1875, 1888, 1901, 1915, 1928, 1940, 1953,
+    1965, 1978, 1990, 2001, 2013, 2024, 2035, 2046, 2057, 2067, 2077, 2087, 2097, 2106, 2115, 2124,
+    2133, 2141, 2149, 2157, 2164, 2171, 2178, 2185, 2191, 2197, 2202, 2208, 2213, 2217, 2222, 2226,
+    2230, 2233, 2236, 2239, 2241, 2244, 2245, 2247, 2248, 2249, 2249, 2250, 2249, 2249, 2248, 2247,
+    2245, 2244, 2241, 2239, 2236, 2233, 2230, 2226, 2222, 2217, 2213, 2208, 2202, 2197, 2191, 2185,
+    2178, 2171, 2164, 2157, 2149, 2141, 2133, 2124, 2115, 2106, 2097, 2087, 2077, 2067, 2057, 2046,
+    2035, 2024, 2013, 2001, 1990, 1978, 1965, 1953, 1940, 1928, 1915, 1901, 1888, 1875, 1861, 1847,
+    1833, 1819, 1805, 1790, 1776, 1761, 1746, 1731, 1716, 1701, 1686, 1671, 1655, 1640, 1625, 1609,
+    1593, 1578, 1562, 1547, 1531, 1515, 1500, 1484, 1468, 1452, 1437, 1421, 1406, 1390, 1374, 1359,
+    1344, 1328, 1313, 1298, 1283, 1268, 1253, 1238, 1223, 1209, 1194, 1180, 1166, 1152, 1138, 1125,
+    1111, 1098, 1084, 1071, 1059, 1046, 1034, 1021, 1009, 998, 986, 975, 964, 953, 942, 932,
+    922, 912, 902, 893, 884, 875, 866, 858, 850, 842, 835, 828, 821, 814, 808, 802,
+    797, 791, 786, 782, 777, 773, 769, 766, 763, 760, 758, 755, 754, 752, 751, 750,
+    750, 750, 750, 750, 751, 752, 754, 755, 758, 760, 763, 766, 769, 773, 777, 782,
+    786, 791, 797, 802, 808, 814, 821, 828, 835, 842, 850, 858, 866, 875, 884, 893,
+    902, 912, 922, 932, 942, 953, 964, 975, 986, 998, 1009, 1021, 1034, 1046, 1059, 1071,
+    1084, 1098, 1111, 1125, 1138, 1152, 1166, 1180, 1194, 1209, 1223, 1238, 1253, 1268, 1283, 1298,
+    1313, 1328, 1344, 1359, 1374, 1390, 1406, 1421, 1437, 1452, 1468, 1484}; // 15k
+const uint32_t spwmSrc_100[150] = {
+    1500, 1512, 1525, 1537, 1550, 1562, 1574, 1586, 1598, 1610, 1622, 1633, 1644, 1655, 1666, 1676,
+    1686, 1696, 1705, 1714, 1722, 1731, 1738, 1746, 1753, 1759, 1765, 1771, 1776, 1781, 1785, 1788,
+    1792, 1794, 1796, 1798, 1799, 1799, 1799, 1799, 1798, 1796, 1794, 1792, 1788, 1785, 1781, 1776,
+    1771, 1765, 1759, 1753, 1746, 1738, 1731, 1722, 1714, 1705, 1696, 1686, 1676, 1666, 1655, 1644,
+    1633, 1622, 1610, 1598, 1586, 1574, 1562, 1550, 1537, 1525, 1512, 1500, 1487, 1474, 1462, 1449,
+    1437, 1425, 1413, 1401, 1389, 1377, 1366, 1355, 1344, 1333, 1323, 1313, 1303, 1294, 1285, 1277,
+    1268, 1261, 1253, 1246, 1240, 1234, 1228, 1223, 1218, 1214, 1211, 1207, 1205, 1203, 1201, 1200,
+    1200, 1200, 1200, 1201, 1203, 1205, 1207, 1211, 1214, 1218, 1223, 1228, 1234, 1240, 1246, 1253,
+    1261, 1268, 1277, 1285, 1294, 1303, 1313, 1323, 1333, 1344, 1355, 1366, 1377, 1389, 1401, 1413,
+    1425, 1437, 1449, 1462, 1474, 1487}; // 15k
+const uint32_t spwmSrc_400[40] = {
+    1406, 1559, 1710, 1852, 1984, 2101, 2202, 2282, 2342, 2378, 2390, 2378, 2342, 2282, 2202, 2101,
+    1984, 1852, 1710, 1559, 1406, 1252, 1101, 959, 827, 710, 609, 529, 469, 433, 421, 433,
+    469, 529, 609, 710, 827, 959, 1101, 1252}; // 16k
+const uint32_t spwmSrc_800[20] = {
+    1406, 1836, 2224, 2532, 2729, 2797, 2729, 2532, 2224, 1836, 1406, 975, 587, 279, 82, 14,
+    82, 279, 587, 975}; // 16k
+const uint32_t spwmSrc_1000[20] = {
+    1125, 1469, 1779, 2026, 2184, 2238, 2184, 2026, 1779, 1469, 1125, 780, 470, 223, 65, 11,
+    65, 223, 470, 780}; // 15k
+
+/*50HZ ARR=2999 0.6??? , 300? , 15k??*/
+/*100HZ ARR=2999 0.2??? , 150? , 15k??*/
+/*400HZ ARR=2249 0.7??? , 40?  ,16k??*/
+/*800HZ ARR=2812 0.9??? , 20?  , 16k??*/
+/*1000HZ ARR=2249 0.9??? , 20? , 20k??*/
+
+spwm_t spwmfre[5]; // 50, 100,400,800,1000
+void spwm_init(void)
+{
+    spwmfre[HZ_50].tim_arr = 2999;
+    spwmfre[HZ_50].len = sizeof(spwmSrc_50) / sizeof(uint32_t);
+    spwmfre[HZ_50].spwm_src = spwmSrc_50;
+
+    spwmfre[HZ_100].tim_arr = 2999;
+    spwmfre[HZ_100].len = sizeof(spwmSrc_100) / sizeof(uint32_t);
+    spwmfre[HZ_100].spwm_src = spwmSrc_100;
+
+    spwmfre[HZ_400].tim_arr = 2812;
+    spwmfre[HZ_400].len = sizeof(spwmSrc_400) / sizeof(uint32_t);
+    spwmfre[HZ_400].spwm_src = spwmSrc_400;
+
+    spwmfre[HZ_800].tim_arr = 2812;
+    spwmfre[HZ_800].len = sizeof(spwmSrc_800) / sizeof(uint32_t);
+    spwmfre[HZ_800].spwm_src = spwmSrc_800;
+
+    spwmfre[HZ_1000].tim_arr = 2249;
+    spwmfre[HZ_1000].len = sizeof(spwmSrc_1000) / sizeof(uint32_t);
+    spwmfre[HZ_1000].spwm_src = spwmSrc_1000;
+}
+
+
+
+void spwm_FreqSelect(fre_select_t fre)
+{
+    /* ADC path removed; keep SPWM enable line in a known state */
+    (void)fre;
+    HAL_GPIO_WritePin(SIGNAL_SPWM_EN_GPIO_Port, SIGNAL_SPWM_EN_Pin, GPIO_PIN_RESET);
+}
+
+void Transformer_Select_Reset(void)
+{
+    HAL_GPIO_WritePin(SIGNAL_EN_24A_GPIO_Port, SIGNAL_EN_24A_Pin, GPIO_PIN_RESET);
+    HAL_GPIO_WritePin(SIGNAL_EN_24B_GPIO_Port, SIGNAL_EN_24B_Pin, GPIO_PIN_RESET);
+    HAL_GPIO_WritePin(SIGNAL_EN_24C_GPIO_Port, SIGNAL_EN_24C_Pin, GPIO_PIN_RESET);
+
+    HAL_GPIO_WritePin(LOGIC_CTRL_IN1_GPIO_Port, LOGIC_CTRL_IN1_Pin, GPIO_PIN_RESET);
+    HAL_GPIO_WritePin(LOGIC_CTRL_IN2_GPIO_Port, LOGIC_CTRL_IN2_Pin, GPIO_PIN_RESET);
+}
+
+void Transformer_Select_24U(void)
+{
+    HAL_GPIO_WritePin(SIGNAL_EN_24A_GPIO_Port, SIGNAL_EN_24A_Pin, GPIO_PIN_SET);
+    HAL_GPIO_WritePin(SIGNAL_EN_24B_GPIO_Port, SIGNAL_EN_24B_Pin, GPIO_PIN_RESET);
+    HAL_GPIO_WritePin(SIGNAL_EN_24C_GPIO_Port, SIGNAL_EN_24C_Pin, GPIO_PIN_RESET);
+
+    HAL_GPIO_WritePin(LOGIC_CTRL_IN1_GPIO_Port, LOGIC_CTRL_IN1_Pin, GPIO_PIN_SET);
+    HAL_GPIO_WritePin(LOGIC_CTRL_IN2_GPIO_Port, LOGIC_CTRL_IN2_Pin, GPIO_PIN_RESET);
+}
+
+void Transformer_Select_24V(void)
+{
+    HAL_GPIO_WritePin(SIGNAL_EN_24A_GPIO_Port, SIGNAL_EN_24A_Pin, GPIO_PIN_RESET);
+    HAL_GPIO_WritePin(SIGNAL_EN_24B_GPIO_Port, SIGNAL_EN_24B_Pin, GPIO_PIN_SET);
+    HAL_GPIO_WritePin(SIGNAL_EN_24C_GPIO_Port, SIGNAL_EN_24C_Pin, GPIO_PIN_RESET);
+
+    HAL_GPIO_WritePin(LOGIC_CTRL_IN1_GPIO_Port, LOGIC_CTRL_IN1_Pin, GPIO_PIN_RESET);
+    HAL_GPIO_WritePin(LOGIC_CTRL_IN2_GPIO_Port, LOGIC_CTRL_IN2_Pin, GPIO_PIN_SET);
+}
+
+void Transformer_Select_24W(void)
+{
+    HAL_GPIO_WritePin(SIGNAL_EN_24A_GPIO_Port, SIGNAL_EN_24A_Pin, GPIO_PIN_RESET);
+    HAL_GPIO_WritePin(SIGNAL_EN_24B_GPIO_Port, SIGNAL_EN_24B_Pin, GPIO_PIN_RESET);
+    HAL_GPIO_WritePin(SIGNAL_EN_24C_GPIO_Port, SIGNAL_EN_24C_Pin, GPIO_PIN_SET);
+
+    HAL_GPIO_WritePin(LOGIC_CTRL_IN1_GPIO_Port, LOGIC_CTRL_IN1_Pin, GPIO_PIN_SET);
+    HAL_GPIO_WritePin(LOGIC_CTRL_IN2_GPIO_Port, LOGIC_CTRL_IN2_Pin, GPIO_PIN_SET);
+}
+
+
+

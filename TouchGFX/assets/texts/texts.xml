@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="utf-8"?>
+<TextDatabase xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="texts.xsd" Version="4.18.0">
+  <Texts>
+    <Text Id="__SingleUse_9DJ8" TypographyId="Default" Alignment="Left" Direction="LTR">
+      <Translation Language="GB">&lt;value&gt;</Translation>
+      <Translation Language="DAC">&lt;value&gt;</Translation>
+    </Text>
+    <Text Id="__SingleUse_XIY8" TypographyId="Default" Alignment="Center" Direction="LTR">
+      <Translation Language="GB">0</Translation>
+      <Translation Language="DAC">0</Translation>
+    </Text>
+    <Text Id="__SingleUse_AHVQ" TypographyId="Default" Alignment="Center" Direction="LTR">
+      <Translation Language="GB">1</Translation>
+      <Translation Language="DAC">1</Translation>
+    </Text>
+    <Text Id="__SingleUse_M724" TypographyId="Default" Alignment="Center" Direction="LTR">
+      <Translation Language="GB">2</Translation>
+      <Translation Language="DAC">2</Translation>
+    </Text>
+    <Text Id="__SingleUse_KC50" TypographyId="Default" Alignment="Center" Direction="LTR">
+      <Translation Language="GB">3</Translation>
+      <Translation Language="DAC">3</Translation>
+    </Text>
+    <Text Id="__SingleUse_OJYV" TypographyId="Default" Alignment="Center" Direction="LTR">
+      <Translation Language="GB">4</Translation>
+      <Translation Language="DAC">4</Translation>
+    </Text>
+    <Text Id="__SingleUse_HG8K" TypographyId="Default" Alignment="Center" Direction="LTR">
+      <Translation Language="GB">5</Translation>
+      <Translation Language="DAC">5</Translation>
+    </Text>
+    <Text Id="__SingleUse_SR86" TypographyId="Default" Alignment="Center" Direction="LTR">
+      <Translation Language="GB">6</Translation>
+      <Translation Language="DAC">6</Translation>
+    </Text>
+    <Text Id="__SingleUse_4W74" TypographyId="Default" Alignment="Center" Direction="LTR">
+      <Translation Language="GB">7</Translation>
+      <Translation Language="DAC">7</Translation>
+    </Text>
+    <Text Id="__SingleUse_NV31" TypographyId="Default" Alignment="Center" Direction="LTR">
+      <Translation Language="GB">8</Translation>
+      <Translation Language="DAC">8</Translation>
+    </Text>
+    <Text Id="__SingleUse_VEO5" TypographyId="Default" Alignment="Center" Direction="LTR">
+      <Translation Language="GB">9</Translation>
+      <Translation Language="DAC">9</Translation>
+    </Text>
+    <Text Id="__SingleUse_JLLR" TypographyId="Default" Alignment="Center" Direction="LTR">
+      <Translation Language="GB">det</Translation>
+      <Translation Language="DAC">.</Translation>
+    </Text>
+    <Text Id="__SingleUse_RJIY" TypographyId="Default" Alignment="Center" Direction="LTR">
+      <Translation Language="GB">OK</Translation>
+      <Translation Language="DAC">OK</Translation>
+    </Text>
+    <Text Id="__SingleUse_H2YE" TypographyId="chinese" Alignment="Left" Direction="LTR">
+      <Translation Language="GB">峰峰值&lt;value&gt;V</Translation>
+      <Translation Language="DAC">峰峰值&lt;value&gt;V</Translation>
+    </Text>
+    <Text Id="__SingleUse_5R5B" TypographyId="chinese" Alignment="Left" Direction="LTR">
+      <Translation Language="GB">0</Translation>
+      <Translation Language="DAC">-</Translation>
+    </Text>
+    <Text Id="__SingleUse_P39A" TypographyId="chinese" Alignment="Left" Direction="LTR">
+      <Translation Language="GB">频率&lt;value&gt;HZ</Translation>
+      <Translation Language="DAC">频率&lt;value&gt;HZ</Translation>
+    </Text>
+    <Text Id="__SingleUse_IGT7" TypographyId="chinese" Alignment="Left" Direction="LTR">
+      <Translation Language="GB">0</Translation>
+      <Translation Language="DAC">-</Translation>
+    </Text>
+  </Texts>
+  <Typographies>
+    <Typography Id="Default" Font="verdana.ttf" Size="20" Bpp="4" FallbackCharacter="?" WildcardCharacters=".0123456789%" WildcardCharacterRanges="0-9,A-Z,a-z" />
+    <Typography Id="Large" Font="verdana.ttf" Size="40" Bpp="4" FallbackCharacter="?" WildcardCharacters="." WildcardCharacterRanges="0-9" />
+    <Typography Id="CN4" Font="STZHONGS.TTF" Size="24" Bpp="4" FallbackCharacter="?" WildcardCharacters=".通道" WildcardCharacterRanges="0-9,A-Z" />
+    <Typography Id="chinese" Font="STZHONGS.TTF" Size="20" Bpp="4" FallbackCharacter="？" WildcardCharacters=".电压频率" WildcardCharacterRanges="0-9,A-Z" />
+  </Typographies>
+</TextDatabase>

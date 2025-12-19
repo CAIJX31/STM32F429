@@ -1,0 +1,10 @@
+template\table_stzhongs_ttf_24_4bpp.o: ../touchgfx/generated/fonts/src/table_stzhongs_ttf_24_4bpp.cpp
+template\table_stzhongs_ttf_24_4bpp.o: ../touchgfx/generated/fonts/include/fonts/GeneratedFont.hpp
+template\table_stzhongs_ttf_24_4bpp.o: ../middlewares/st/touchgfx/framework/include/touchgfx/ConstFont.hpp
+template\table_stzhongs_ttf_24_4bpp.o: ../middlewares/st/touchgfx/framework/include/touchgfx/hal/Types.hpp
+template\table_stzhongs_ttf_24_4bpp.o: D:\KEIL\CORE\ARM\ARMCC\Bin\..\include\assert.h
+template\table_stzhongs_ttf_24_4bpp.o: D:\KEIL\CORE\ARM\ARMCC\Bin\..\include\stdint.h
+template\table_stzhongs_ttf_24_4bpp.o: ../middlewares/st/touchgfx/framework/include/touchgfx/hal/Config.hpp
+template\table_stzhongs_ttf_24_4bpp.o: ../middlewares/st/touchgfx/framework/include/touchgfx/Font.hpp
+template\table_stzhongs_ttf_24_4bpp.o: ../middlewares/st/touchgfx/framework/include/touchgfx/Unicode.hpp
+template\table_stzhongs_ttf_24_4bpp.o: D:\KEIL\CORE\ARM\ARMCC\Bin\..\include\stdarg.h

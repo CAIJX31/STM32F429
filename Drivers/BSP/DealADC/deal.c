@@ -1,0 +1,1 @@
+/* ADC data processing removed */
